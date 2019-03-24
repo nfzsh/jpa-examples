@@ -2,6 +2,7 @@ package com.example.springbootexperiment02;
 
 import com.example.springbootexperiment02.repository.UserRepository;
 import com.example.springbootexperiment02.entity.*;
+import org.hibernate.mapping.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +37,17 @@ public class SpingbootExperment02ApplicationTests {
     @Test
     public void updateAddressTest(){
         userRepository.updateAddress(1, 12);
+    }
+    @Test
+    public void listaddressTest(){
+        userRepository.listAddresses(1);
+    }
+    @Test
+    public void removeAddressTest(){
+        userRepository.removeAddress(5);
+    }
+    @Test
+    public void removeUserTest(){
+        userRepository.removeUser(12);
     }
 }
